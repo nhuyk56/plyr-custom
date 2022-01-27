@@ -1,6 +1,8 @@
 git pull
 rm -rf node_modules
 rm -rf package.json
+rm -rf package-lock.json
+npm init -y
 npm i @babel/core@7.16.5 -D
 npm i @babel/plugin-proposal-class-properties@7.16.5 -D
 npm i @babel/preset-env@7.16.5 -D
@@ -55,3 +57,4 @@ npm i loadjs@4.2.0
 npm i rangetouch@2.0.1
 npm i url-polyfill@1.1.12
 git checkout package.json
+git checkout package-lock.json
