@@ -259,12 +259,12 @@ export function closest(element, selector) {
 
 // Find all elements
 export function getElements(selector) {
-  return this.elements.container.querySelectorAll(selector);
+  return this.elements.container.parentNode.querySelectorAll(selector);
 }
 
 // Find a single element
 export function getElement(selector) {
-  return this.elements.container.querySelector(selector);
+  return this.elements.container.parentNode.querySelector(selector);
 }
 
 // Set focus and tab focus class
