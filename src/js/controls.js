@@ -1272,6 +1272,22 @@ const controls = {
     const container = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapper));
     this.elements.controls = container;
 
+    const existingClass = 'bg-cyan-900 py-1 relative content-center flex rounded-full mt-2 flex-nowrap justify-center'
+    const containerMediaInfo = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapperMediaInfo, { class: 'flex' }))
+    const containerMediaProgress = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapperMediaProgress, { class: 'flex' }))
+    const containerMediaTimer = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapperMediaTimer, { class: 'flex' }))
+    const containerMediaControl = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapperMediaControl, { class: existingClass }))
+    const containerMediaSpeed = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapperMediaSpeed, { class: existingClass }))
+    const containerMediaTimeLeft = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapperMediaTimeLeft, { class: existingClass }))
+    const containerMediaHistory = createElement('div', getAttributesFromSelector(this.config.selectors.controls.wrapperMediaHistory, { class: existingClass }))
+    container.appendChild(containerMediaInfo)
+    container.appendChild(containerMediaProgress)
+    container.appendChild(containerMediaTimer)
+    container.appendChild(containerMediaControl)
+    container.appendChild(containerMediaSpeed)
+    container.appendChild(containerMediaTimeLeft)
+    container.appendChild(containerMediaHistory)
+
     // Default item attributes
     const defaultAttributes = { class: 'plyr__controls__item' };
 
@@ -1279,22 +1295,22 @@ const controls = {
     dedupe(is.array(this.config.controls) ? this.config.controls : []).forEach((control) => {
       // Restart button
       if (control === 'restart') {
-        container.appendChild(createButton.call(this, 'restart', defaultAttributes));
+        containerMediaControl.appendChild(createButton.call(this, 'restart', defaultAttributes));
       }
 
       // Rewind button
       if (control === 'rewind') {
-        container.appendChild(createButton.call(this, 'rewind', defaultAttributes));
+        containerMediaControl.appendChild(createButton.call(this, 'rewind', defaultAttributes));
       }
 
       // Play/Pause button
       if (control === 'play') {
-        container.appendChild(createButton.call(this, 'play', defaultAttributes));
+        containerMediaControl.appendChild(createButton.call(this, 'play', defaultAttributes));
       }
 
       // Fast forward button
       if (control === 'fast-forward') {
-        container.appendChild(createButton.call(this, 'fast-forward', defaultAttributes));
+        containerMediaControl.appendChild(createButton.call(this, 'fast-forward', defaultAttributes));
       }
 
       // Progress
@@ -1333,17 +1349,17 @@ const controls = {
 
         this.elements.progress = progress;
         progressContainer.appendChild(this.elements.progress);
-        container.appendChild(progressContainer);
+        containerMediaProgress.appendChild(progressContainer);
       }
 
       // Media current time display
       if (control === 'current-time') {
-        container.appendChild(createTime.call(this, 'currentTime', defaultAttributes));
+        containerMediaTimer.appendChild(createTime.call(this, 'currentTime', defaultAttributes));
       }
 
       // Media duration display
       if (control === 'duration') {
-        container.appendChild(createTime.call(this, 'duration', defaultAttributes));
+        containerMediaTimer.appendChild(createTime.call(this, 'duration', defaultAttributes));
       }
 
       // Volume controls

@@ -2,13 +2,13 @@
     "js": {
         "plyr.js": {
             "src": "./src/js/plyr.js",
-            "dist": "./dist/",
+            "dist": "C:/Users/YNN/Desktop/responsive-audio-player/hls-sample",
             "formats": ["es", "umd"],
             "namespace": "Plyr"
         },
         "plyr.polyfilled.js": {
             "src": "./src/js/plyr.polyfilled.js",
-            "dist": "./dist/",
+            "dist": "C:/Users/YNN/Desktop/responsive-audio-player/hls-sample",
             "formats": ["es", "umd"],
             "namespace": "Plyr",
             "polyfill": true
@@ -24,7 +24,7 @@
     "css": {
         "plyr.css": {
             "src": "./src/sass/plyr.scss",
-            "dist": "./dist/"
+            "dist": "C:/Users/YNN/Desktop/responsive-audio-player/hls-sample"
         },
         "demo.css": {
             "src": "./demo/src/sass/bundles/demo.scss",

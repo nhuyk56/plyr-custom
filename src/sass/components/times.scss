@@ -6,15 +6,15 @@
   font-size: $plyr-font-size-time;
 }
 
-// Media duration hidden on small screens
-.plyr__time + .plyr__time {
-  // Add a slash in before
-  &::before {
-    content: '\2044';
-    margin-right: $plyr-control-spacing;
-  }
+// // Media duration hidden on small screens
+// .plyr__time + .plyr__time {
+//   // Add a slash in before
+//   &::before {
+//     // content: '\2044';
+//     margin-right: $plyr-control-spacing;
+//   }
 
-  @media (max-width: ($plyr-bp-md - 1px)) {
-    display: none;
-  }
-}
+//   @media (max-width: ($plyr-bp-md - 1px)) {
+//     display: none;
+//   }
+// }

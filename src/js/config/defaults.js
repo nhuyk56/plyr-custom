@@ -294,6 +294,13 @@ const defaults = {
     controls: {
       container: null,
       wrapper: '.plyr__controls',
+      wrapperMediaInfo: '.plyr__controls__media__info',
+      wrapperMediaProgress: '.plyr__controls__media__progress',
+      wrapperMediaTimer: '.plyr__controls__media__timer',
+      wrapperMediaControl: '.plyr__controls__media__control',
+      wrapperMediaSpeed: '.plyr__controls__media__speed',
+      wrapperMediaTimeLeft: '.plyr__controls__media__time__left',
+      wrapperMediaHistory: '.plyr__controls__media__history',
     },
     labels: '[data-plyr]',
     buttons: {
